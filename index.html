@@ -207,10 +207,10 @@
 							<!-- <li class="nav-item"><a class="nav-link" href="#">
 								<svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
 							</a></li> -->
-							<li class="nav-item font-serif"><a class="nav-link" href="#">Cuándo y dónde</a></li>
-							<li class="nav-item font-serif"><a class="nav-link" href="#">Código de vestimenta</a></li>
-							<li class="nav-item font-serif"><a class="nav-link" href="#">Confirmación</a></li>
-							<li class="nav-item font-serif"><a class="nav-link" href="#">Mesa de regalos</a></li>
+							<li class="nav-item font-serif"><a class="nav-link" href="#cuando-y-donde">Cuándo y dónde</a></li>
+							<li class="nav-item font-serif"><a class="nav-link" href="#codigo-de-vestimenta">Código de vestimenta</a></li>
+							<li class="nav-item font-serif"><a class="nav-link" href="#confirmacion">Confirmación</a></li>
+							<li class="nav-item font-serif"><a class="nav-link" href="#mesa-de-regalos">Mesa de regalos</a></li>
 							<li class="nav-item font-serif"><a class="nav-link" href="#">Galería</a></li>
 								<!-- <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg> -->
 							</a></li>
@@ -242,7 +242,7 @@
 			</div>
       
       <!-- CUÁNDO Y DÓNDE -->
-			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+			<div id="cuando-y-donde" class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
 				<div class="me-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center overflow-hidden" style="background-color: #3E2C3C">
 					<div class="my-3 py-3 pt-3 pb-3">
 						<img class="img-fluid" src="./img/hacienda-trebolito.jpg" alt="">
@@ -266,7 +266,7 @@
 			</div>
 
       <!-- CÓDIGO DE VESTIMENTA -->
-      <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 font-serif " >
+      <div id="codigo-de-vestimenta" class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 font-serif " >
         <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
           <div class="my-3 py-3">
             <h2 class="display-5" style="font-family: Great Vibes; font-size: 4.5rem;">Código de Vestimenta</h2>
@@ -295,15 +295,50 @@
 					</div>
 				</div>
 			</div>
-			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 font-serif " >
+
+      <!-- CONFIRMACIÓN -->
+			<div id="confirmacion" class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 font-serif " >
 				<div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
 					<div class="my-3 py-3">
 						<h2 class="display-5" style="font-family: Great Vibes; font-size: 4.5rem;">Confirmación</h2>
+
+            <h2>Ingresa tu código de invitación</h2>
+            <form id="codeForm">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" required>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div id="resultado" style="margin-top: 20px;"></div>
+
+            <script>
+                // Lista de códigos y URLs asociadas
+                const codigoURL = {
+                    "ABC123": "https://docs.google.com/forms/d/e/1FAIpQLSd7hgjGiaTdwLbekna7j9O_NKdVMdYmGU8O1ynnAHj8ituwyw/viewform?usp=dialog",
+                    "XYZ789": "https://ejemplo.com/invitado2",
+                    "DEF456": "https://ejemplo.com/invitado3"
+                };
+
+                // Manejar el envío del formulario
+                document.getElementById('codeForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const codigo = document.getElementById('codigo').value.trim();
+                    const resultado = document.getElementById('resultado');
+
+                    if (codigoURL[codigo]) {
+                        resultado.innerHTML = `<p>Tu enlace de confirmación:</p><a href="${codigoURL[codigo]}" target="_blank">Haz clic aquí para continuar</a>`;
+                    } else {
+                        resultado.innerHTML = '<p style="color: red;">Código no válido. Por favor, verifica e intenta de nuevo.</p>';
+                    }
+                });
+            </script>
 					</div>
 				</div>
 			</div>
+      
       <!-- MESA DE REGALOS -->
-			<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 font-serif " >
+			<div id="mesa-de-regalos" class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 font-serif " >
 				<div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="background-color: #BAAACC !important;">
 					<div class="my-3 py-3">
 						<h2 class="display-5" style="font-family: Great Vibes; font-size: 4.5rem;">Mesa de Regalos</h2>
