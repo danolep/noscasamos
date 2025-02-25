@@ -259,8 +259,12 @@
 						</p>
 					</div>
 					<div class="shadow-sm mx-auto" style="width: 80%; height: 150px; border-radius: 21px 21px 0 0; background-color: #BAAACC">
-						<a href="https://maps.app.goo.gl/boD6wqTmaruCCRV69" target="_blank" style="color: #ffffff !important; text-decoration: none; ">¿Cómo llegar?</a> <br>
-						<a href="https://maps.app.goo.gl/boD6wqTmaruCCRV69" target="_blank" style="color: #ffffff !important; text-decoration: none; ">Descargar Mapa</a>
+            <p class="font-serif">
+							<i style="font-size: 1.5rem;">¿Cómo llegar?</i><br><p class="font-serif">
+            </p>
+						<a href="https://maps.app.goo.gl/boD6wqTmaruCCRV69" target="_blank" style="color: #ffffff !important; text-decoration: none; ">Ver mapa</a> <br>
+						<a href="https://waze.com/ul/hd2g76ke6k" target="_blank" style="color: #ffffff !important; text-decoration: none; ">Llegar con Waze</a> <br>
+						<a href="./img/Mapa-Como-llegar-low.pdf" target="_blank" style="color: #ffffff !important; text-decoration: none; ">Descargar Mapa PDF</a>
 					</div>
 				</div>
 			</div>
@@ -306,7 +310,7 @@
             <form id="codeForm">
                 <label for="codigo">Código:</label>
                 <input type="text" id="codigo" name="codigo" required>
-                <button type="submit">Enviar</button>
+                <button type="submit">Buscar</button>
             </form>
 
             <div id="resultado" style="margin-top: 20px;"></div>
@@ -327,7 +331,8 @@
                     const resultado = document.getElementById('resultado');
 
                     if (codigoURL[codigo]) {
-                        resultado.innerHTML = `<p>Tu enlace de confirmación:</p><a href="${codigoURL[codigo]}" target="_blank">Haz clic aquí para continuar</a>`;
+                        resultado.innerHTML = `<h3>Te invitamos confirmar tu asistencia en el siguiente formulario:</h3>
+                        <a href="${codigoURL[codigo]}" target="_blank"> Haz clic aquí para continuar</a>`;
                     } else {
                         resultado.innerHTML = '<p style="color: red;">Código no válido. Por favor, verifica e intenta de nuevo.</p>';
                     }
