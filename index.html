@@ -262,13 +262,24 @@
             <p class="font-serif">
 							<i style="font-size: 2rem;">¿Cómo llegar?</i><br><p class="font-serif">
             </p>
-						<a href="https://maps.app.goo.gl/boD6wqTmaruCCRV69" target="_blank" style="color: #ffffff !important; text-decoration: none; ">Ver mapa</a> <br>
-						<a href="https://waze.com/ul/hd2g76ke6k" target="_blank" style="color: #ffffff !important; text-decoration: none; ">Llegar con Waze</a> <br>
-						<a href="./img/Mapa-Como-llegar-low.pdf" target="_blank" style="color: #ffffff !important; text-decoration: none; ">Descargar Mapa PDF</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z"/>
+            </svg>
+            <a href="https://maps.app.goo.gl/boD6wqTmaruCCRV69" target="_blank" style="color: #3E2C3C !important; ">Ver mapa</a> <br>
+						
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+              <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
+            </svg>
+            <a href="https://waze.com/ul/hd2g76ke6k" target="_blank" style="color: #3E2C3C !important; ">Llegar con Waze</a> <br>
+						
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-download-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0m-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708z"/>
+            </svg>
+            <a href="./img/Mapa-Como-llegar-low.pdf" target="_blank" style="color: #3E2C3C !important; ">Descargar mapa PDF</a>
 					</div>
 				</div>
 			</div>
-
+      
       <!-- CÓDIGO DE VESTIMENTA -->
       <div id="codigo-de-vestimenta" class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 font-serif " >
         <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
@@ -308,9 +319,10 @@
 
             <h2>Ingresa tu código de invitación</h2>
             <form id="codeForm">
-                <label for="codigo">Código:</label>
-                <input type="text" id="codigo" name="codigo" required>
-                <button type="submit">Buscar</button>
+                <label for="codigo" class="form-label">Código:</label>
+                <input type="text" id="codigo" name="codigo"  style="width: 10%;" required>
+                <button type="submit" class="btn btn-bd-primary"id="enviarBtn">Buscar</button>
+
             </form>
 
             <div id="resultado" style="margin-top: 20px;"></div>
@@ -328,13 +340,15 @@
                     event.preventDefault();
 
                     const codigo = document.getElementById('codigo').value.trim();
-                    const resultado = document.getElementById('resultado');
+            const resultado = document.getElementById('resultado');
+            const enviarBtn = document.getElementById('enviarBtn');
 
                     if (codigoURL[codigo]) {
                         resultado.innerHTML = `<h3>Te invitamos confirmar tu asistencia en el siguiente formulario:</h3>
                         <a href="${codigoURL[codigo]}" target="_blank"> Haz clic aquí para continuar</a>`;
+                        enviarBtn.style.display = 'none'; // Ocultar el botón de enviar
                     } else {
-                        resultado.innerHTML = '<p style="color: red;">Código no válido. Por favor, verifica e intenta de nuevo.</p>';
+                        resultado.innerHTML = '<p style="color: red;"><em> Código no válido. Por favor, verifica e intenta de nuevo.</em></p>';
                     }
                 });
             </script>
