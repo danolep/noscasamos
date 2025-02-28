@@ -245,7 +245,7 @@
 			<div id="cuando-y-donde" class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
 				<div class="me-md-3 pt-3 px-3 pt-md-3 px-md-3 text-center overflow-hidden" style="background-color: #3E2C3C">
 					<div class="my-3 py-3 pt-3 pb-3">
-						<img class="img-fluid" src="./img/hacienda-trebolito.jpg" alt="">
+						<img class="img-fluid" src="./img/hacienda-trebolito.jpeg" alt="">
 					</div>
 					
 				</div>
@@ -319,9 +319,9 @@
 
             <h2>Ingresa tu código de invitación</h2>
             <form id="codeForm">
-                <label for="codigo" class="form-label">Código:</label>
-                <input type="text" id="codigo" name="codigo"  style="width: 10%;" required>
-                <button type="submit" class="btn btn-bd-primary"id="enviarBtn">Buscar</button>
+               <!--  <label for="codigo" class="form-label">Código:</label><br> -->
+                <input type="text" id="codigo" name="codigo"  style=" " required><br><br>
+                <button type="submit" class="btn btn-bd-primary btn-lg"id="enviarBtn">Buscar</button>
 
             </form>
 
@@ -330,9 +330,46 @@
             <script>
                 // Lista de códigos y URLs asociadas
                 const codigoURL = {
-                    "ABC123": "https://docs.google.com/forms/d/e/1FAIpQLSd7hgjGiaTdwLbekna7j9O_NKdVMdYmGU8O1ynnAHj8ituwyw/viewform?usp=dialog",
-                    "XYZ789": "https://ejemplo.com/invitado2",
-                    "DEF456": "https://ejemplo.com/invitado3"
+                    "DE9341": "https://forms.gle/w7oEEi9gYPnmfiQq9",
+                    "DE1850": "https://forms.gle/DRAFEf971eKydq4F6",
+                    "DE4788": "https://forms.gle/C8tgtyL81X1CP9hG8",
+                    "DE1548": "https://forms.gle/mPqzcDPUr1LY5XgL9",
+                    "DE7437": "https://forms.gle/pCAL3cxF9pLCdVtRA",
+                    "DE4536": "https://forms.gle/cM6E8fucEec2kn6eA",
+                    "DE1949": "https://forms.gle/4A3NanV18KtzwAue6",
+                    "DE9386": "https://forms.gle/3Sc8WLQq7kcJuAx99",
+                    "DE4138": "https://forms.gle/zzhz8znGeq1CxwhX9",
+                    "DE4916": "https://forms.gle/K89yFa3cQs3rJPK7A",
+                    "DE4803": "https://forms.gle/eEyDTzgZBBiNoLZH8",
+                    "DE3087": "https://forms.gle/DMB6tmLWh3mYYJmj9",
+                    "DE8017": "https://forms.gle/jTSSofrPtVJjqU2i7",
+                    "DE3805": "https://forms.gle/duwFp5d8prwJADeK8",
+                    "DE5537": "https://forms.gle/AztJztjR9TAy4N5EA",
+                    "DE3476": "https://forms.gle/sgqh7qANfsr79uXF8",
+                    "DE8252": "https://forms.gle/cVSHxGwCDz3cbgRU8",
+                    "DE7053": "https://forms.gle/BykSJoieEfK6AHsb6",
+                    "DE4828": "https://forms.gle/LReUAKZCiaMNeB7b6",
+                    "DE6695": "https://forms.gle/qgjTuzpAY6CisHjh6",
+                    "DE5554": "https://forms.gle/WTuMUvnEm8jAYjnEA",
+                    "DE1739": "https://forms.gle/J2strVW6ycEyA4178",
+                    "DE3640": "https://forms.gle/Twq3qZ5PDxmmm14f7",
+                    "DE2930": "https://forms.gle/rs8nsibeiPn1iS5R8",
+                    "DE5444": "https://forms.gle/DKc7qnEpQks13CNf9",
+                    "DE5649": "https://forms.gle/FGozrJhFzmtK2G4w8",
+                    "DE5877": "https://forms.gle/gvrxhXESoyevKWCP7",
+                    "DE2360": "https://forms.gle/7k7tpwp3F3oftAbS7",
+                    "DE1935": "https://forms.gle/7THLWnthyoyyEgUH6",
+                    "DE7486": "https://forms.gle/6JTCo4zcQ4SGU5oR7",
+                    "DE7428": "https://forms.gle/HLjrdBxSi8xPs6Lr5",
+                    "DE7484": "https://forms.gle/eV2Hq7k7yEf3NDZk6",
+                    "DE5817": "https://forms.gle/MB1RHccwjuiKMboT8",
+                    "DE3631": "https://forms.gle/pkQMuEPUMBB1128t9",
+                    "DE7657": "https://forms.gle/1xYf6Bj3GaEeCo3F8",
+                    "DE4865": "https://forms.gle/THXKKhSe9fi2s9Zg9",
+                    "DE5764": "https://forms.gle/PvgSYASuYTrQLES29",
+                    "DE9352": "https://forms.gle/zdZxGbWbYEVTBtdv6",
+                    "DE8483": "https://forms.gle/zk7G5492QFSeAFoC8",
+                    "DE8886": "https://forms.gle/m9GewpnCWrsBB3GE6"
                 };
 
                 // Manejar el envío del formulario
