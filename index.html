@@ -29,12 +29,28 @@
         user-select: none;
       }
 
-      @media (min-width: 768px) {
+      .los-novios{
+        font-family: Great Vibes;
+        font-size: 5.5rem;
+        color: #ffffff;
+        margin-top: 30%;
+      }
+      @media (max-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+        .los-novios{
+        font-size: 3rem;
+        margin-top: 30%;
+        }
       }
-
+      /* @include media-breakpoint-up(sx) {
+        .los-novios {
+          color: red;
+          font-size: 1rem;
+        }
+      } */
+    
       .b-example-divider {
         width: 100%;
         height: 3rem;
@@ -225,11 +241,11 @@
 		</nav>
 
 		<main>
-			<div class="background-image position-relative overflow-hidden p-3 p-md-5 text-center ">
-				<div class="col-md-8 p-lg-5 mx-auto my-5 ">
-					<h1 class=" " style="font-family: Great Vibes; font-size: 100px; color: #ffffff; margin-top: 30%;" >Erika & Daniel</h1>
+			<div class="background-image position-relative overflow-hidden text-center ">
+				<div class="col-md-8 col-sm-12 p-lg-5 my-5">
+					<h1 class="los-novios">Erika & Daniel</h1>
 					
-					<h3 class="fw-normal mb-3 font-serif sub-title" style="font-size: 3.5rem; color: #ffffff;" >NOS CASAMOS</h3>
+					<h3 class="fw-normal mb-3 font-serif sub-title nos-casamos" style="font-size: 3.5rem; color: #ffffff;" >NOS CASAMOS</h3>
 					<!-- <div class="d-flex gap-3 justify-content-center lead fw-normal">
 						<a class="icon-link" href="#">
 							Learn more
